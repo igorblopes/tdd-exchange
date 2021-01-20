@@ -15,7 +15,7 @@ export class CurrenciesService {
 
     async getCurrency(currency:string):Promise<any> {
         try{
-            await this.correnciesRepository.getCurrency(currency);
+            return await this.correnciesRepository.getCurrency(currency);
         }catch(error){
             throw new InternalServerErrorException();
         }
